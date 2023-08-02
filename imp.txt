@@ -1,0 +1,6 @@
+1.morgan->every time  when an http url hits it prints on the console
+2. env(environment)-?store personal detail
+3.index.js->server connection
+3.client->fronted(UI)
+4.Use bootstrap
+5.reactjs(js library)
