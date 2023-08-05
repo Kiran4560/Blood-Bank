@@ -9,7 +9,7 @@ const connectDB = async () => {
         .white
     );
   } catch (error) {
-    console.log(`Mongodb Database Error ${error}`.bgyellow.white);
+    console.log(`Mongodb Database Error ${error}`.bgRed.white);
   }
 };
 
