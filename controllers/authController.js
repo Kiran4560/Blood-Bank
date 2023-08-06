@@ -51,17 +51,20 @@ const loginController = async (req, res) => {
         message: "role doesn't match",
       });
     }
+    //console.log("user",user);
     //compare password
     const comparePassword = await bcrypt.compare(
       req.body.password,
       user.password
     );
+    
     if (!comparePassword) {
       return res.status(500).send({
         success: false,
         message: "Invalid Credentials",
       });
     }
+    //console.log("password",comparePassword);
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
